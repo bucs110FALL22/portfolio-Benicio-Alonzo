@@ -43,11 +43,24 @@ pygame.init()
 window = pygame.display.set_mode()
 
 coords = []
-num_sides = (4)
+num_sides = (3)
 side_length =(35) 
 offset = (50)
 color = "aquamarine"
 
+for i in range(num_sides):
+  theta = (2.0 * math.pi * i) /   num_sides
+  x = side_length * math.cos(theta) + offset
+  y = side_length * math.sin(theta) + offset
+  coords.append((x,y))
+
+pygame.draw.polygon(window,color,coords)
+pygame.display.flip()
+pygame.time.wait(700)
+window.fill("black")
+
+coords = []
+num_sides = (4)
 for i in range(num_sides):
   theta = (2.0 * math.pi * i) /   num_sides
   x = side_length * math.cos(theta) + offset
@@ -97,7 +110,5 @@ pygame.draw.polygon(window,color,coords)
 pygame.display.flip()
 pygame.time.wait(700)
 window.fill("black")
-
-
 
 #window.exitonclick()
