@@ -45,6 +45,7 @@ for i in range(2,upper_limit+1):
   
  
   iters[i]=count
+  
   iters_new[i*Scale] = display_height-count*Scale
   coords = list(iters_new.items())
   
@@ -58,9 +59,12 @@ for i in range(2,upper_limit+1):
   if len(coords) > 1:
     pygame.draw.lines(display, color, False, coords)
     pygame.time.wait(1000)
+
+
     pygame.display.flip()
     
-
+print(iters)#added/fixed
+pygame.time.wait(1000)
 
 
 
