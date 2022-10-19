@@ -41,7 +41,7 @@ sequence(n)
 
 for i in range(2,upper_limit+1):
   count = sequence(i)
-  iters.update({i*Scale:count*Scale})
+  # iters.update({i*Scale:count*Scale})  #took this out 
   
  
   iters[i]=count
